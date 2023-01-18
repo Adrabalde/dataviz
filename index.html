@@ -11,8 +11,8 @@
 <center>
 
     <body>
-        <div>
-            <h1>Requete</h1>
+        <div style="text-align: center; margin: 5%; padding-top: 25px;">
+            <h1>Requete 1</h1>
             <p>Liste des musiques</p>
 		
 		
@@ -30,8 +30,30 @@
 <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3Fmusique%20%3Fname%20%3Fdirector%20%3Frelease_date%20%0A%20%20%20%20%20%20%20%20%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fmusique%20wdt%3AP31%20wd%3AQ11424.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fmusique%20wdt%3AP495%20wd%3AQ30.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fmusique%20rdfs%3Alabel%20%3Fname.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%3Fmusique%20wdt%3AP57%20%3Fdirector.%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%3Fmusique%20wdt%3AP577%20%3Frelease_date.%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20Limit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
       
 	
+
+
+
+<div style="text-align: center; margin: 5%; padding-top: 25px;">
+    <h1>Requete 2</h1>
+
+
+SELECT ?rapfrançais ?name ?director ?release_date 
+    WHERE {
+        ?rapfrançais wdt:P31 wd:Q11424.
+        ?rapfrançais wdt:P495 wd:Q30.
+        ?rapfrançais rdfs:label ?name.
+        OPTIONAL{?rapfrançais wdt:P57 ?director.}
+        OPTIONAL{?rapfrançais wdt:P577 ?release_date.}
+    } Limit 1000
+    
+
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3Frapfran%C3%A7ais%20%3Fname%20%3Fdirector%20%3Frelease_date%20%0A%20%20%20%20%20%20%20%20%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Frapfran%C3%A7ais%20wdt%3AP31%20wd%3AQ11424.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Frapfran%C3%A7ais%20wdt%3AP495%20wd%3AQ30.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Frapfran%C3%A7ais%20rdfs%3Alabel%20%3Fname.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%3Frapfran%C3%A7ais%20wdt%3AP57%20%3Fdirector.%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%3Frapfran%C3%A7ais%20wdt%3AP577%20%3Frelease_date.%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20Limit%20200" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+
+    <div style="text-align: center; margin: 5%; padding-top: 25px;">
+
+
 	    
-		<div style="text-align: center; padding-top: 25px;">
 		<a href="e02_modeles_graphiques.html">lien vers exo 2</a>
 		</div>
 	
